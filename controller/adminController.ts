@@ -4,7 +4,7 @@ const prisma = new PrismaClient();
 const route = express.Router();
 const cors = require("cors");
 
-route.post('/',  async (req, res): Promise<any> => {
+route.post('/',   async (req, res): Promise<any> => {
     try {
         const {name, email} = req.body;
         await prisma.user.create({
